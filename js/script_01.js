@@ -255,8 +255,9 @@ function createAxisX(round) {
         const rangeX_numberOfDigitsRounded = Math.floor(rangeX_numberOfDigits - 0.35);
         const tickAxisXTickInc = Math.pow(10, rangeX_numberOfDigitsRounded);
         let round = 1;
-        if (tickAxisXTickInc === 0.1)
+        if (tickAxisXTickInc <= 0.1){
             round = Math.round(1 / tickAxisXTickInc);
+        }
         for (let Xtick = defaultSettings.axisXCenter; Xtick <= defaultSettings.maxX; Xtick += tickAxisXTickInc) {
             createAxisXTick(Xtick, round);
         }
@@ -294,7 +295,7 @@ function createAxisY() {
         const rangeY_numberOfDigitsRounded = Math.floor(rangeY_numberOfDigits - 0.35);
         const tickAxisYTickInc = Math.pow(10, rangeY_numberOfDigitsRounded);
         let round = 1;
-        if (tickAxisYTickInc === 0.1)
+        if (tickAxisYTickInc <= 0.1)
             round = Math.round(1 / tickAxisYTickInc);
         for (let Ytick = defaultSettings.axisYCenter; Ytick <= defaultSettings.maxY; Ytick += tickAxisYTickInc) {
             createAxisYTick(Ytick, round);

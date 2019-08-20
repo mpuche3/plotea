@@ -1,0 +1,11 @@
+*:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+}

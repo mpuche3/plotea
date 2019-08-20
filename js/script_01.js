@@ -253,7 +253,7 @@ function createAxisX(round) {
         const rangeX = defaultSettings.maxX - defaultSettings.minX;
         const rangeX_numberOfDigits = Math.log10(rangeX);
         const rangeX_numberOfDigitsRounded = Math.floor(rangeX_numberOfDigits - 0.35);
-        const tickAxisXTickInc = Math.round(Math.pow(10, rangeX_numberOfDigitsRounded));
+        const tickAxisXTickInc = Math.pow(10, rangeX_numberOfDigitsRounded);
         let round = 1;
         if (tickAxisXTickInc === 0.1)
             round = Math.round(1 / tickAxisXTickInc);
